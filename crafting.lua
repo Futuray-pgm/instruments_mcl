@@ -1,5 +1,5 @@
 minetest.register_craft({
-	output = "instruments:fretboard",
+	output = "instruments_mcl:fretboard",
 	recipe = {
 		{"group:tree", "mcl_core:iron_ingot"},
 		{"group:tree", "mcl_core:iron_ingot"},
@@ -8,14 +8,14 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "instruments:tuning_peg 2",
+	output = "instruments_mcl:tuning_peg 2",
 	recipe = {
 		{"mcl_core:iron_ingot", "mcl_core:stick", "mcl_core:iron_ingot"}
 	}
 })
 
 minetest.register_craft({
-	output = "instruments:headsheet",
+	output = "instruments_mcl:headsheet",
 	recipe = {
 		{"mcl_core:paper", "mcl_core:paper", "mcl_core:paper"},
 		{"mcl_mobitems:string", "mcl_mobitems:string", "mcl_mobitems:string"},
@@ -25,33 +25,33 @@ minetest.register_craft({
 
 
 minetest.register_craft({
-	output = "instruments:banjo_body",
+	output = "instruments_mcl:banjo_body",
 	recipe = {
-		{"group:tree", "instruments:headsheet", "group:tree"},
+		{"group:tree", "instruments_mcl:headsheet", "group:tree"},
 		{"mcl_core:iron_ingot", "mcl_core:iron_ingot", "mcl_core:iron_ingot"}
 	}
 })
 
 minetest.register_craft({
-	output = "instruments:banjo_stock",
+	output = "instruments_mcl:banjo_stock",
 	recipe = {
-		{"instruments:tuning_peg", "mcl_core:iron_ingot", "instruments:tuning_peg"},
-		{"instruments:tuning_peg", "mcl_core:iron_ingot", "instruments:tuning_peg"},
-		{"", "instruments:fretboard", ""}
+		{"instruments_mcl:tuning_peg", "mcl_core:iron_ingot", "instruments_mcl:tuning_peg"},
+		{"instruments_mcl:tuning_peg", "mcl_core:iron_ingot", "instruments_mcl:tuning_peg"},
+		{"", "instruments_mcl:fretboard", ""}
 	}
 })
 
 minetest.register_craft({
-	output = "instruments:banjo",
+	output = "instruments_mcl:banjo",
 	recipe = {
-		{"instruments:banjo_stock"},
+		{"instruments_mcl:banjo_stock"},
 		{"mcl_mobitems:string"},
-		{"instruments:banjo_body"}
+		{"instruments_mcl:banjo_body"}
 	}
 })
 
 minetest.register_craft({
-	output = "instruments:harmonica_body",
+	output = "instruments_mcl:harmonica_body",
 	recipe = {
 		{"mcl_core:iron_ingot", "mcl_core:iron_ingot", "mcl_core:iron_ingot"},
 		{"mcl_amethyst:amethyst_shard", "mcl_amethyst:amethyst_shard", "mcl_amethyst:amethyst_shard"},
@@ -60,33 +60,33 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "instruments:harmonica_casing",
+	output = "instruments_mcl:harmonica_casing",
 	recipe = {
-		{"default:gold_ingot", "mcl_core:iron_ingot", "default:gold_ingot"},
+		{"mcl_core:gold_ingot", "mcl_core:iron_ingot", "mcl_core:gold_ingot"},
 		{"", "", ""},
 		{"mcl_core:iron_ingot", "mcl_core:iron_ingot", "mcl_core:iron_ingot"},
 	}
 })
 
 minetest.register_craft({
-	output = "instruments:harmonica",
+	output = "instruments_mcl:harmonica",
 	type = "shapeless",
-	recipe = {"instruments:harmonica_body", "instruments:harmonica_casing"}
+	recipe = {"instruments_mcl:harmonica_body", "instruments_mcl:harmonica_casing"}
 })
 
 minetest.register_craft({
-	output = "instruments:drum",
+	output = "instruments_mcl:drum",
 	recipe = {
-		{"group:tree", "instruments:headsheet", "group:tree"},
+		{"group:tree", "instruments_mcl:headsheet", "group:tree"},
 		{"group:tree", "", "group:tree"},
 		{"group:tree", "", "group:tree"},
 	}
 })
 
 minetest.register_craft({
-	output = "instruments:drum_stick",
+	output = "instruments_mcl:drum_stick",
 	recipe = {
-		{"default:dry_shrub"},
+		{"mcl_core:deadbush"},
 		{"mcl_core:stick"}
 	}
 })
@@ -95,7 +95,7 @@ minetest.register_craft({
 
 if minetest.get_modpath("moreores") ~= nil then
 	minetest.register_craft({
-		output = "instruments:silver_pipe",
+		output = "instruments_mcl:silver_pipe",
 		recipe = {
 			{"moreores:silver_ingot", "moreores:silver_ingot", "moreores:silver_ingot"},
 			{"", "", ""},
@@ -103,14 +103,14 @@ if minetest.get_modpath("moreores") ~= nil then
 		}
 	})
 	minetest.register_craft({
-		output = "instruments:flute_keys 2",
+		output = "instruments_mcl:flute_keys 2",
 		recipe = {
 			{"", "moreores:silver_ingot", "moreores:silver_ingot"},
 			{"mcl_core:iron_ingot", "", ""}
 		}
 	})
 	minetest.register_craft({
-		output = "instruments:embouchure",
+		output = "instruments_mcl:embouchure",
 		recipe = {
 			{"moreores:silver_ingot", "", "moreores:silver_ingot"},
 			{"mcl_core:iron_ingot", "", "mcl_core:iron_ingot"}
@@ -118,7 +118,7 @@ if minetest.get_modpath("moreores") ~= nil then
 	})
 else
 	minetest.register_craft({
-		output = "instruments:silver_pipe",
+		output = "instruments_mcl:silver_pipe",
 		recipe = {
 			{"mcl_core:iron_ingot", "mcl_core:iron_ingot", "mcl_core:iron_ingot"},
 			{"", "", ""},
@@ -126,15 +126,16 @@ else
 		}
 	})
 	minetest.register_craft({
-		output = "instruments:flute_keys 2",
+		output = "instruments_mcl:flute_keys 2",
 		recipe = {
 			{"", "mcl_core:iron_ingot", "mcl_core:iron_ingot"},
 			{"mcl_core:iron_ingot", "", ""}
 		}
 	})
 	minetest.register_craft({
-		output = "instruments:embouchure",
+		output = "instruments_mcl:embouchure",
 		recipe = {
+			{"", "", "mcl_core:iron_ingot"},
 			{"mcl_core:iron_ingot", "", "mcl_core:iron_ingot"},
 			{"mcl_core:iron_ingot", "", "mcl_core:iron_ingot"}
 		}
@@ -142,18 +143,18 @@ else
 end
 
 minetest.register_craft({
-	output = "instruments:flute",
+	output = "instruments_mcl:flute",
 	recipe = {
-		{"instruments:embouchure", "instruments:flute_keys", "instruments:flute_keys"},
-		{"instruments:silver_pipe", "instruments:silver_pipe", "instruments:silver_pipe"},
-		{"", "instruments:flute_keys", "instruments:flute_keys"}
+		{"instruments_mcl:embouchure", "instruments_mcl:flute_keys", "instruments_mcl:flute_keys"},
+		{"instruments_mcl:silver_pipe", "instruments_mcl:silver_pipe", "instruments_mcl:silver_pipe"},
+		{"", "instruments_mcl:flute_keys", "instruments_mcl:flute_keys"}
 	}
 })
 
 minetest.register_craft({
-	output = "instruments:untuned_resonator",
+	output = "instruments_mcl:untuned_resonator",
 	recipe = {
-		{"instruments:tuning_peg", "instruments:tuning_peg", "instruments:tuning_peg"},
+		{"instruments_mcl:tuning_peg", "instruments_mcl:tuning_peg", "instruments_mcl:tuning_peg"},
 		{"mcl_mobitems:string", "mcl_mobitems:string", "mcl_mobitems:string"},
 		{"mcl_core:stick", "mcl_core:paper", "mcl_core:stick"}
 	}
