@@ -4,7 +4,7 @@ local bnotes = {"banjo_0", "banjo_3", "banjo_5", "banjo_3", "banjo_6", "banjo_5"
 "banjo_1", "banjo_3", "banjo_5", "banjo_3", "banjo_6", "banjo_5", "banjo_4", "banjo_3", "banjo_4", "banjo_5", "banjo_7", "banjo_5"}
 local bcurrent_note = 0
 
-minetest.register_tool("instruments:debug_banjo", {
+minetest.register_tool("instruments_mcl:debug_banjo", {
 	description = "Debugging Banjo",
 	range = 0,
 	on_secondary_use = function()
@@ -24,7 +24,7 @@ minetest.register_tool("instruments:debug_banjo", {
 local hnotes = {"harmonica_0", "harmonica_1", "harmonica_2", "harmonica_3", "harmonica_4", "harmonica_3", "harmonica_1", "harmonica_2"}
 local hcurrent_note = 0
 
-minetest.register_tool("instruments:debug_harmonica", {
+minetest.register_tool("instruments_mcl:debug_harmonica", {
 	description = "Debugging Harmonica",
 	range = 0,
 	on_secondary_use = function()
@@ -41,7 +41,7 @@ minetest.register_tool("instruments:debug_harmonica", {
 
 
 
-minetest.register_tool("instruments:debug_drum", {
+minetest.register_tool("instruments_mcl:debug_drum", {
 	description = "Debugging Drum",
 	range = 0,
 	on_secondary_use = function()
@@ -68,7 +68,7 @@ local pnotes = {"piano_5", "piano_2", "piano_5", "piano_2", "piano_5", "piano_6"
 }
 local pcurrent_note = 0
 
-minetest.register_tool("instruments:debug_piano", {
+minetest.register_tool("instruments_mcl:debug_piano", {
 	description = "Debugging Piano",
 	range = 0,
 	on_secondary_use = function()
@@ -90,7 +90,7 @@ local fnotes = {"flute_1", "flute_3", "flute_5", "flute_1", "flute_6", "flute_5"
 local fcurrent_note = 0
 local fcurrent_sound = 0
 
-minetest.register_tool("instruments:debug_flute", {
+minetest.register_tool("instruments_mcl:debug_flute", {
 	description = "Debugging Flute",
 	range = 0,
 	on_secondary_use = function()
@@ -110,7 +110,7 @@ local bfnotes = {"bassflute_0", "bassflute_1", "bassflute_2", "bassflute_1", "ba
 local bfcurrent_note = 0
 local bfcurrent_sound = 0
 
-minetest.register_tool("instruments:debug__bassflute", {
+minetest.register_tool("instruments_mcl:debug__bassflute", {
 	description = "Debugging Bass Flute",
 	range = 0,
 	on_secondary_use = function()

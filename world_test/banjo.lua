@@ -4,7 +4,7 @@ local notes = {"banjo_0", "banjo_3", "banjo_5", "banjo_3", "banjo_6", "banjo_5",
 "banjo_1", "banjo_3", "banjo_5", "banjo_3", "banjo_6", "banjo_5", "banjo_4", "banjo_3", "banjo_4", "banjo_5", "banjo_7", "banjo_5"}
 local current_note = 0
 
-minetest.register_tool("instruments:banjo", {
+minetest.register_tool("instruments_mcl:banjo", {
 	description = "Banjo",
 	range = 0.35,
 	inventory_image = "banjo_front_wt.png",
@@ -23,13 +23,13 @@ minetest.register_tool("instruments:banjo", {
 
 
 
-minetest.register_craftitem("instruments:banjo_body", {
+minetest.register_craftitem("instruments_mcl:banjo_body", {
 	description = "Banjo Body",
 	inventory_image = "banjo_body.png",
 	wield_image = "banjo_body.png"
 })
 
-minetest.register_craftitem("instruments:banjo_stock", {
+minetest.register_craftitem("instruments_mcl:banjo_stock", {
 	description = "Banjo Stock",
 	inventory_image = "banjo_stock_wt.png",
 	wield_image = "banjo_stock_wt.png"

@@ -9,7 +9,7 @@ local bnotes = {"bassflute_0", "bassflute_1", "bassflute_2", "bassflute_1", "bas
 local bcurrent_note = 0
 local bcurrent_sound = 0
 
-minetest.register_tool("instruments:flute", {
+minetest.register_tool("instruments_mcl:flute", {
 	description = "Flute",
 	range = 0.35,
 	inventory_image = "flute.png",
@@ -27,19 +27,19 @@ minetest.register_tool("instruments:flute", {
 	wield_scale = {x=1.5,y=1,z=1}
 })
 
-minetest.register_craftitem("instruments:embouchure", {
+minetest.register_craftitem("instruments_mcl:embouchure", {
 	description = "Flute Embouchure",
 	inventory_image = "embouchure.png",
 	wield_image = "embouchure.png"
 })
 
-minetest.register_craftitem("instruments:flute_keys", {
+minetest.register_craftitem("instruments_mcl:flute_keys", {
 	description = "Flute Keys",
 	inventory_image = "silver_keys.png",
 	wield_image = "silver_keys.png"
 })
 
-minetest.register_craftitem("instruments:silver_pipe", {
+minetest.register_craftitem("instruments_mcl:silver_pipe", {
 	description = "Flute Pipe",
 	inventory_image = "silver_pipe.png",
 	wield_image = "silver_pipe.png"

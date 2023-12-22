@@ -2,7 +2,7 @@ local notes = {"harmonica_0", "harmonica_1", "harmonica_2", "harmonica_3", "harm
 local current_note = 0
 local current_sound = 0
 
-minetest.register_tool("instruments:harmonica", {
+minetest.register_tool("instruments_mcl:harmonica", {
 	description = "Harmonica",
 	range = 0.35,
 	inventory_image = "harmonica.png",
@@ -19,13 +19,13 @@ minetest.register_tool("instruments:harmonica", {
 	end
 })
 
-minetest.register_craftitem("instruments:harmonica_casing", {
+minetest.register_craftitem("instruments_mcl:harmonica_casing", {
 	description = "Harmonica Casing",
 	inventory_image = "harmonica_casing.png",
 	wield_image = "harmonica_casing.png"
 })
 
-minetest.register_craftitem("instruments:harmonica_body", {
+minetest.register_craftitem("instruments_mcl:harmonica_body", {
 	description = "Harmonica Body",
 	inventory_image = "harmonica_body.png",
 	wield_image = "harmonica_body.png"

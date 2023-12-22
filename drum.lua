@@ -5,7 +5,7 @@ local function get_node_group(name, group)
     return minetest.registered_nodes[name].groups[group]
 end
 
-minetest.register_node("instruments:drum", {
+minetest.register_node("instruments_mcl:drum", {
 	description = "Drum",
 	tiles = {
 		"drum_top.png",
@@ -17,7 +17,7 @@ minetest.register_node("instruments:drum", {
 		"default_acacia_tree.png",
 	},
 	use_texture_alpha = "clip",
-	groups = {oddly_breakable_by_hand = 3, drum = 1},
+	groups = {handy = 1, pickaxey = 1, drum = 1},
 	paramtype = "light",
 	drawtype = "nodebox",
 	node_box = {
@@ -31,7 +31,7 @@ minetest.register_node("instruments:drum", {
 	end,
 })
 
-minetest.register_tool("instruments:drum_stick", {
+minetest.register_tool("instruments_mcl:drum_stick", {
 	description = "Drumstick",
 	inventory_image = "drum_stick.png",
 	wield_image = "drum_stick.png",
@@ -45,7 +45,7 @@ minetest.register_tool("instruments:drum_stick", {
 	end
 })
 
-minetest.register_craftitem("instruments:untuned_resonator", {
+minetest.register_craftitem("instruments_mcl:untuned_resonator", {
 	description = "Untuned String Resonator",
 	inventory_image = "untuned_resonator.png",
 	wield_image = "untuned_resonator.png",
@@ -53,7 +53,7 @@ minetest.register_craftitem("instruments:untuned_resonator", {
 })
 
 local register_drum_tuning = function(color, chord, ch_name)
-	minetest.register_node("instruments:drum_tuned_"..chord, {
+	minetest.register_node("instruments_mcl:drum_tuned_"..chord, {
 		description = ch_name.." Tuned Drum",
 		tiles = {
 			"drum_top.png",
@@ -64,7 +64,7 @@ local register_drum_tuning = function(color, chord, ch_name)
 			"default_acacia_tree.png^overlay_drum_"..color..".png"
 		},
 		use_texture_alpha = "clip",
-		groups = {oddly_breakable_by_hand = 3, drum = 1},
+		groups = {handy = 1, pickaxey = 1, drum = 1},
 		paramtype = "light",
 		drawtype = "nodebox",
 		node_box = {
@@ -77,21 +77,21 @@ local register_drum_tuning = function(color, chord, ch_name)
 			minetest.sound_play("drum_smack_"..chord, {gain = 1})
 		end,
 	})
-	minetest.register_craftitem("instruments:tuned_resonator_"..chord, {
+	minetest.register_craftitem("instruments_mcl:tuned_resonator_"..chord, {
 		description = ch_name.." Tuned String Resonator",
 		inventory_image = "untuned_resonator.png^overlay_tuning_"..color..".png",
 		wield_image = "untuned_resonator.png^overlay_tuning_"..color..".png",
 		groups = {string_resonator = 1}
 	})
 	minetest.register_craft({
-		output = "instruments:tuned_resonator_"..chord,
+		output = "instruments_mcl:tuned_resonator_"..chord,
 		type = "shapeless",
 		recipe = {"group:string_resonator", "mcl_dye:"..color}
 	})
 	minetest.register_craft({
-		output = "instruments:drum_tuned_"..chord,
+		output = "instruments_mcl:drum_tuned_"..chord,
 		type = "shapeless",
-		recipe = {"instruments:drum", "instruments:tuned_resonator_"..chord}
+		recipe = {"instruments_mcl:drum", "instruments_mcl:tuned_resonator_"..chord}
 	})
 end
 
